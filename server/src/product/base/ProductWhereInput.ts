@@ -29,7 +29,7 @@ class ProductWhereInput {
   @Field(() => StringNullableFilter, {
     nullable: true,
   })
-  description?: StringNullableFilter;
+  name?: StringNullableFilter;
 
   @ApiProperty({
     required: false,
@@ -62,7 +62,7 @@ class ProductWhereInput {
   @Field(() => StringNullableFilter, {
     nullable: true,
   })
-  name?: StringNullableFilter;
+  description?: StringNullableFilter;
 
   @ApiProperty({
     required: false,

@@ -4,9 +4,9 @@ import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 import { OrderListRelationFilter } from "../order/OrderListRelationFilter";
 
 export type ProductWhereInput = {
-  description?: StringNullableFilter;
+  name?: StringNullableFilter;
   id?: StringFilter;
   itemPrice?: FloatNullableFilter;
-  name?: StringNullableFilter;
+  description?: StringNullableFilter;
   orders?: OrderListRelationFilter;
 };
