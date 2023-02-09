@@ -1,9 +1,10 @@
-import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
 
 export type UserWhereInput = {
-  firstName?: StringNullableFilter;
   id?: StringFilter;
+  firstName?: StringNullableFilter;
   lastName?: StringNullableFilter;
   username?: StringFilter;
+  nickname?: StringNullableFilter;
 };
