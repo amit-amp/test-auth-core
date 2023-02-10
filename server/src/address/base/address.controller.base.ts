@@ -35,13 +35,13 @@ export class AddressControllerBase {
     return await this.service.create({
       data: data,
       select: {
+        id: true,
+        createdAt: true,
+        updatedAt: true,
         address_1: true,
         address_2: true,
         city: true,
-        createdAt: true,
-        id: true,
         state: true,
-        updatedAt: true,
         zip: true,
       },
     });
@@ -55,13 +55,13 @@ export class AddressControllerBase {
     return this.service.findMany({
       ...args,
       select: {
+        id: true,
+        createdAt: true,
+        updatedAt: true,
         address_1: true,
         address_2: true,
         city: true,
-        createdAt: true,
-        id: true,
         state: true,
-        updatedAt: true,
         zip: true,
       },
     });
@@ -76,13 +76,13 @@ export class AddressControllerBase {
     const result = await this.service.findOne({
       where: params,
       select: {
+        id: true,
+        createdAt: true,
+        updatedAt: true,
         address_1: true,
         address_2: true,
         city: true,
-        createdAt: true,
-        id: true,
         state: true,
-        updatedAt: true,
         zip: true,
       },
     });
@@ -106,13 +106,13 @@ export class AddressControllerBase {
         where: params,
         data: data,
         select: {
+          id: true,
+          createdAt: true,
+          updatedAt: true,
           address_1: true,
           address_2: true,
           city: true,
-          createdAt: true,
-          id: true,
           state: true,
-          updatedAt: true,
           zip: true,
         },
       });
@@ -136,13 +136,13 @@ export class AddressControllerBase {
       return await this.service.delete({
         where: params,
         select: {
+          id: true,
+          createdAt: true,
+          updatedAt: true,
           address_1: true,
           address_2: true,
           city: true,
-          createdAt: true,
-          id: true,
           state: true,
-          updatedAt: true,
           zip: true,
         },
       });
@@ -166,19 +166,19 @@ export class AddressControllerBase {
     const results = await this.service.findCustomers(params.id, {
       ...query,
       select: {
+        id: true,
+        createdAt: true,
+        updatedAt: true,
+        firstName: true,
+        lastName: true,
+        email: true,
+        phone: true,
+
         address: {
           select: {
             id: true,
           },
         },
-
-        createdAt: true,
-        email: true,
-        firstName: true,
-        id: true,
-        lastName: true,
-        phone: true,
-        updatedAt: true,
       },
     });
     if (results === null) {
